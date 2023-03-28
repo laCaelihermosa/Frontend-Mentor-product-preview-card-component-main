@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --White:                 hsl(0, 0%, 100%);
+    --Cream:                hsl(30, 38%, 92%);
+    --Dark-Cyan:           hsl(158, 36%, 37%);
+    --Very-Dark-Blue:      hsl(212, 21%, 14%);
+    --Very-Dark-Green:     hsl(157, 48%, 18%);
+    --Dark-Grayish-Blue:   hsl(228, 12%, 48%);
+    --Montserrat-Font:    'Montserrat', sans-serif;
+    --Fraunces-Font:      'Fraunces', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Montserrat-Font); 
+    background-color: var(--Cream);  
+}
+
+.card {
+    width: 345px;
+    height: 600px;  
+    margin: 75px auto 10px;
+    border-radius: 10px;
+    background-color: var(--White);
+    overflow: hidden;
+}
+
+.image {
+    width: 345px;
+    height: 240px;
+}
+
+.content {
+    padding: 25px;
+}
+
+.item {    
+    font: 500 0.7em var(--Montserrat-Font);    
+    letter-spacing: 6px;
+    color: var(--Dark-Grayish-Blue);
+}
+.title {
+    margin-top: 18px;
+    font: 700 1.9em var(--Fraunces-Font);        
+    line-height: 28px;
+}
+
+.description {
+    margin: 13px 0;    
+    font: 500 0.88em var(--Montserrat-Font);
+    line-height: 20px;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;    
+}
+
+.discount {  
+    font: 1.9em var(--Fraunces-Font);
+    color: var(--Dark-Cyan);
+}
+
+.regular {
+    font-size: 0.75em ;
+    text-decoration: line-through;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.button {
+    display: block;
+    align-items: center;
+    width: 295px;
+    height: 50px;    
+    margin: auto;    
+    border: none;
+    border-radius: 8px;     
+    font-weight: 700 0.75em var(--Montserrat-Font);
+    color: var(--White);
+    background-color: var(--Dark-Cyan);
+}
+.button:hover {
+    cursor: pointer;
+    background-color: var(--Very-Dark-Green);
+    box-shadow: 1px 4px 4px 4px var(--Cream);
+}
+
+.cart {
+    margin-right: 12px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}    
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Desktop Viewport: 1440px */
+@media (min-width: 620px){
+    .card {
+        display: flex;
+        width: 600px;
+        height: 450px;
+        margin: 175px auto 75px;        
+    }
+
+    .product {
+        width: 300px;
+    }
+
+    .image {
+        width: 300px;
+        height: 100%;
+        content: url(images/image-product-desktop.jpg); /*ver en coding tube*/
+    }
+
+    .content {
+        width: 300px;
+        height: 100%;
+        padding: 30px;
+    }
+
+    .title {
+        margin-top: 30px;
+        font-size: 2em;
+    }
+
+    .description {
+        margin-top: 30px;
+        line-height: 23px;
+    }
+
+    .prices {
+        gap: 25px;
+    }
+
+    .button {
+        width: 240px;
+        height: 45px;
+        margin-top: 35px;
+    }
+}
